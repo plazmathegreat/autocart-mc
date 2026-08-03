@@ -83,9 +83,10 @@ public class AutoTntCartReceiver {
 
         world.setBlockState(placePos, Blocks.RAIL.getDefaultState(), 3);
 
-        TntMinecartEntity cart = new TntMinecartEntity(world,
-                placePos.getX() + 0.5, placePos.getY() + 0.25, placePos.getZ() + 0.5);
-        world.spawnEntity(cart);
+        
+        TntMinecartEntity cart = new TntMinecartEntity(EntityType.TNT_MINECART, world);
+cart.setPosition(x, y, z);
+world.spawnEntity(cart);
     }
 
     private static RegistryEntry<Enchantment> getEnchantmentEntry(World world, RegistryKey<Enchantment> key) {

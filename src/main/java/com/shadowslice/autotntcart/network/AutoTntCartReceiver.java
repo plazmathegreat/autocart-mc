@@ -26,7 +26,7 @@ public class AutoTntCartReceiver {
     public static void register() {
         ServerPlayNetworking.registerGlobalReceiver(AutoTntCartPayload.ID, (payload, context) -> {
             ServerPlayerEntity player = context.player();
-            World world = player.getServerWorld();
+            World world = player.getEntityWorld()
             context.server().execute(() -> handle(payload, world, player));
         });
     }

@@ -1,24 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "autotntcart",
+  "id": "alien_wc",
   "version": "1.0.0",
-  "name": "AutoTntCart",
-  "description": "一键完成瞬爆矿车技巧（先射箭，再放置铁轨和TNT矿车）",
-  "authors": ["ShadowSlice"],
+  "name": "Alien Wind Charge",
+  "description": "Executes a frame-perfect Alien Wind Charge launch hotkey.",
+  "authors": ["Developer"],
   "contact": {},
-  "license": "ARR",
-  "environment": "*",
+  "license": "MIT",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "com.shadowslice.autotntcart.AutoTntCartMod"
-    ],
     "client": [
-      "com.shadowslice.autotntcart.AutoTntCartClient"
+      "com.alienwc.AlienWindChargeClient"
     ]
   },
   "depends": {
-    "fabricloader": ">=0.18.1",
-    "minecraft": "1.21.11",
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21",
     "java": ">=21",
     "fabric-api": "*"
   }
